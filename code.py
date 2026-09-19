@@ -5,6 +5,8 @@
 # import getpass
 #password = getpass.getpass('Please enter psswd:')
 from rich import print
-from pyfiglet import print_figlet
-
-print_figlet('PYTHON')
+name = input('name :')
+city = input('city :')
+with open("test.txt","a",encoding="utf-8") as moh :
+    moh.write(f"\nname is : {name}")
+    moh.write(f"\ncity is : {city}")
