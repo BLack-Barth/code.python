@@ -5,3 +5,6 @@
 # import getpass
 #password = getpass.getpass('Please enter psswd:')
 from rich import print
+from pyfiglet import print_figlet
+
+print_figlet('PYTHON')
