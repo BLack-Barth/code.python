@@ -5,14 +5,16 @@
 # import getpass
 #password = getpass.getpass('Please enter psswd:')
 # def => define
+# https://jsonplaceholder.typicode.com/posts
 from rich import print
+import requests
 
-def addnum(num1 , num2):
-    return num1 + num2
-
-num1 = int(input('Enter number 1:'))
-num2 = int(input('Enter number 2:'))
-
-result = addnum(num1 , num2)
-
-print('result = ' + str(result))
+URL = 'https://jsonplaceholder.typicode.com/users'
+data = {
+    "userId" : 11,
+    "name" : "black bart",
+    "job" : "bug bounty hunter"
+}
+response = requests.post(URL,data)
+print(f'code status : {response.status_code}')
+print(response.json())
