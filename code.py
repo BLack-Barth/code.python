@@ -4,9 +4,15 @@
 # input -> str |  int(input) -> int | float(input) -> float
 # import getpass
 #password = getpass.getpass('Please enter psswd:')
+# def => define
 from rich import print
-name = input('name :')
-city = input('city :')
-with open("test.txt","a",encoding="utf-8") as moh :
-    moh.write(f"\nname is : {name}")
-    moh.write(f"\ncity is : {city}")
+
+def addnum(num1 , num2):
+    return num1 + num2
+
+num1 = int(input('Enter number 1:'))
+num2 = int(input('Enter number 2:'))
+
+result = addnum(num1 , num2)
+
+print('result = ' + str(result))
